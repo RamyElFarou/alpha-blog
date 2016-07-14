@@ -7,10 +7,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+  <%= render 'layouts/navigation' %>
   <%= render 'layouts/messages' %>
-  
-<%= yield %> <!-- all other views in layouts get served through this yield -->
-
+  <div class = "container">
+  <%= yield %> <!-- all other views in layouts get served through this yield -->
+  </div>
+  <%= render 'layouts/footer' %>
 </body>
 </html>
