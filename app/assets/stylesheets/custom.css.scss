@@ -30,12 +30,13 @@ $navbar-default-bg: #e6e6f3;
     background-size: cover;
     background-repeat: no-repeat;
     color: grey;
+    border: solid;
 }
 .jumbotron h1 {
   color: #000000;
   text-align:center;
   margin-bottom: 30px;
-  letter-spacing: -1px;
+  letter-spacing: 5px;
 }
 
 .btn-xlarge {
