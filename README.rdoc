@@ -1,1 +1,4 @@
-This is the repository for the first alpha-blog of the complete ruby on rails developer course
+Validations for User class:
+-Username must be present and unique
+-email must be present and unique
+-validate email format using regex
