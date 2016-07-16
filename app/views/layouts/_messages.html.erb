@@ -2,9 +2,11 @@
   <div class = "col-xs-10 col-xs-offset-1">
        <% flash.each do |name, msg| %>         <!-- name is type of message i.e. danger, success, etc. -->
      <div class = 'alert alert-<%="#{name}" %>'>     <!-- name is then referred here to specify the type of alert -->
-       <a href = "#" class = "close" data-dismiss= "alert">&#215;</a>
+       <a href = "#" class = "close" data-dismiss= "alert">&#215;</a>     <!-- &#215 is the X option to dismiss alert -->
        <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
       </div>
        <% end %> <!-- end of do block -->
   </div>
 </div>
+
+<!-- content_tag is a built in helper-method available through rails which returns html block of :div tag that surrounds the cocontent msg, and will be returned only if msg is a string -->
