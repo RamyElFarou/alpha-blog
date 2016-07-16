@@ -1,4 +1,4 @@
-$navbar-default-bg: #08088A;
+$navbar-default-bg: #e6e6f3;
 
 
 
@@ -64,3 +64,16 @@ footer ul li {
   float: left;
   margin-left: 15px;
 }
+
+.cancel-request {
+  text-align: center;
+}
+
+table, th, td {
+    border: 1px solid black;
+    text-align: center;
+}
+
+table.all-articles td:nth-child(3) {padding:10px;} //3
+table.all-articles td:nth-child(4) {padding:10px;} //4
+table.all-articles td:nth-child(5) {padding:10px;} //5
