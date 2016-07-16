@@ -13,8 +13,9 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    #render plain: params[:article].inspect
+    debugger
     @article = Article.new(article_params)
+   @article.user = User.first #ensures that article has a user#
    if @article.save
      flash[:success] = "Article was successfully created" #flash notice is printed out via messages partial#
      redirect_to article_path(@article)
@@ -51,7 +52,7 @@ class ArticlesController < ApplicationController
     end
 
     def article_params #method to whitelist whatever has been submitted
-      params.require(:article).permit(:title, :description)
+      params.require(:article).permit(:title, :description,)
     end
 
 
