@@ -24,20 +24,23 @@ $navbar-default-bg: #e6e6f3;
 }
 
 .jumbotron {
-  background-image: asset-url('jumbotron_background.png');
-  background-size:cover;
+    margin-bottom: 0px;
+    background-image: url(../img/jumbotronbackground.jpg);
+    background-position: 0% 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: grey;
 }
 .jumbotron h1 {
-  color: #fff;
+  color: #000000;
   text-align:center;
   margin-bottom: 30px;
   letter-spacing: -1px;
-  font-weight: bold;
 }
 
 .btn-xlarge {
   font-size: 1.7em;
-  background-color:white;
+
 }
 
 footer {
