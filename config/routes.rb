@@ -10,6 +10,8 @@ Rails.application.routes.draw do
 
   resources :articles
 
+  get 'signup', to: 'users#new' #send to users controller, new action
+  resources :users, except: [:new] #this is how you specify a certain route when you want to call-in resources
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
