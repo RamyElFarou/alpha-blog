@@ -13,7 +13,7 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    debugger
+    #debugger
     @article = Article.new(article_params)
    @article.user = User.first #ensures that article has a user#
    if @article.save
