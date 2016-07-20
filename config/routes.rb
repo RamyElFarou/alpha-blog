@@ -12,6 +12,11 @@ Rails.application.routes.draw do
 
   get 'signup', to: 'users#new' #send to users controller, new action
   resources :users, except: [:new] #this is how you specify a certain route when you want to call-in resources
+
+  get 'login', to: 'sessions#new'
+  post 'login', to: 'sessions#create'
+  delete 'logout', to: 'sessions#destroy'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
