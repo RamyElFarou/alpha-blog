@@ -28,7 +28,7 @@ $navbar-default-bg: #e6e6f3;
     background-size: cover;
     background-repeat: no-repeat;
     color: grey;
-    
+
 }
 .jumbotron h1 {
   color: #000000;
@@ -108,4 +108,8 @@ table.all-articles td:nth-child(5) {padding:10px;} //5
   border-top: 1px solid #eaeaea;
   padding-top: 15px;
   padding-bottom: 15px;
+}
+
+.seperator {
+  padding-top: 20px;
 }
