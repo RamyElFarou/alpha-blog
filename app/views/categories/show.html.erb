@@ -1,0 +1,8 @@
+<h1 align = "center"> <%= "Category: " + @category.name %></h1>
+<div align = "center">
+  <%= will_paginate @category_articles %> <!-- displays the page navigation -->
+</div>
+<%= render 'articles/article', obj: @category_articles %> <!-- _article is a generic partial, so we need to pass the object -->
+<div align = "center">
+  <%= will_paginate @category_articles %>
+</div>
