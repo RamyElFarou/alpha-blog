@@ -2,7 +2,14 @@ require 'test_helper'
 
 class CreateCategoriesTest < ActionDispatch::IntegrationTest
 #we have successfully implemented ability to create a category from the UI
+
+   def setup
+    @user = User.create(username: "John", email: "john1234@exmaple.com", password: "password", admin: true)
+  end
+
+
   test "get new category form and create category" do
+    sign_in_as(@user, "password")
     get new_category_path
     assert_template 'categories/new' #this was already confirmed in category controller test, just another approach
     assert_difference 'Category.count', 1 do
@@ -12,7 +19,9 @@ class CreateCategoriesTest < ActionDispatch::IntegrationTest
     assert_match "sports", response.body
   end
 
+
   test "invalid category submission results in failure" do
+    sign_in_as(@user, "password")
     get new_category_path
     assert_template 'categories/new' #this was already confirmed in category controller test, just another approach
     assert_no_difference 'Category.count' do
