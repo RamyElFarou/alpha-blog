@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class CreateCategoriesTest < ActionDispatch::IntegrationTest
+class ListCategoriesTest < ActionDispatch::IntegrationTest
 #we have successfully implemented ability to create a category from the UI
   def setup
     @category = Category.create(name: "books")
